@@ -35,7 +35,7 @@ namespace CSharpLibrary
             Console.Write("Enter the target date:");
             var targetDate = Convert.ToDateTime(Console.ReadLine());
             Console.WriteLine("Start Date: {0}      End Date:{1}", startDate.ToString("dd-MM-yyyy"), targetDate.ToString("dd-MM-yyyy"));
-            Console.WriteLine("Total Working days: {0}", DateUtils.CalculateWorkingDays(startDate, targetDate ));
+            Console.WriteLine("Total Working days: {0}", DateUtils.CalculateWorkingDaysMethod2(startDate, targetDate));
         }
     }
 }

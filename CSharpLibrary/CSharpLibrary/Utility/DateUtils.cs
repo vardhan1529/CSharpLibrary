@@ -9,6 +9,13 @@ namespace CSharpLibrary.Utility
 {
     public class DateUtils
     {
+
+        /// <summary>
+        /// Calculation of days excluding saturday and sunday by initial forward shift of date
+        /// </summary>
+        /// <param name="d1">date 1</param>
+        /// <param name="d2">date 2</param>
+        /// <returns>No of days</returns>
         public static int CalculateWorkingDays(DateTime d1, DateTime d2)
         {
             DateTime startDate;
@@ -65,6 +72,77 @@ namespace CSharpLibrary.Utility
             return initialCutoff + (weeks * 5) + finalCutoff;
         }
 
+        /// <summary>
+        /// Calculation of days excluding saturday and sunday by initial backward shift of date
+        /// </summary>
+        /// <param name="d1">date 1</param>
+        /// <param name="d2">date 2</param>
+        /// <returns>No of days</returns>
+        public static int CalculateWorkingDaysMethod2(DateTime d1, DateTime d2)
+        {
+            DateTime startDate;
+            DateTime endDate;
+            if (d1 > d2)
+            {
+                startDate = d2;
+                endDate = d1;
+            }
+            else
+            {
+                startDate = d1;
+                endDate = d2;
+            }
+
+            var startDay = startDate.DayOfWeek;
+            var initialCutoff = 0;
+            switch (startDay)
+            {
+                case DayOfWeek.Sunday: 
+                    initialCutoff = 6;
+                    break;
+                case DayOfWeek.Saturday:
+                    initialCutoff = 5;
+                    break;
+                case DayOfWeek.Friday:
+                    initialCutoff = 4;
+                    break;
+                case DayOfWeek.Thursday:                     
+                    initialCutoff = 3;
+                    break;
+                case DayOfWeek.Wednesday:
+                    initialCutoff = 2;
+                    break;
+                case DayOfWeek.Tuesday:
+                    initialCutoff = 1;
+                    break;
+                case DayOfWeek.Monday:                      
+                    initialCutoff = 0;
+                    break;
+            }
+
+            var modifiedInitialDate = startDate.AddDays(initialCutoff == 0 ? 0 : -initialCutoff);
+
+            var totalDiffDays = (endDate - modifiedInitialDate).Days + 1;
+            var weeks = totalDiffDays / 7;
+            var finalCutoff = totalDiffDays % 7;
+            if (finalCutoff > 5)
+            {
+                finalCutoff = 5;
+            }
+
+            if (startDay == DayOfWeek.Sunday || startDay == DayOfWeek.Saturday)
+            {
+                initialCutoff = 5;
+            }
+
+            return (weeks * 5) + finalCutoff - initialCutoff;
+        }
+
+        /// <summary>
+        /// Calculates the no of working days from a list of start and end date pairs
+        /// </summary>
+        /// <param name="pairs">Start and End date pairs</param>
+        /// <returns>no of working days</returns>
         public static int CalculateWorkingDays(List<StartEndDatePair> pairs)
         {
             var allDates = new List<DateTime>();
