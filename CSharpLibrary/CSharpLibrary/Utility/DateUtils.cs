@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpLibrary.Modals;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,33 @@ namespace CSharpLibrary.Utility
             }
 
             return initialCutoff + (weeks * 5) + finalCutoff;
+        }
+
+        public static int CalculateWorkingDays(List<StartEndDatePair> pairs)
+        {
+            var allDates = new List<DateTime>();
+            foreach(var pair in pairs)
+            {
+                var diff = Math.Abs((pair.EndDate - pair.StartDate).Days);
+                for(var i =0; i <= diff; i++)
+                {
+                    allDates.Add(pair.StartDate.AddDays(i));
+                }
+            }
+
+            var distDates = allDates.Distinct().ToList();
+
+            var count = 0;
+            foreach(var date in distDates)
+            {
+                var day = date.DayOfWeek;
+                if(day != DayOfWeek.Sunday && day != DayOfWeek.Saturday)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         private static int GetInitialCutOff(DayOfWeek day)
