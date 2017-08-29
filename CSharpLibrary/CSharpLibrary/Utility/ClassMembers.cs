@@ -17,7 +17,6 @@ namespace CSharpLibrary.Utility
             {
                 return CachedProperties;
             }
-
             var repoNamespace = System.Configuration.ConfigurationManager.AppSettings["RepoNamespace"].ToString();
             Dictionary<string, Dictionary<string, Type>> res = new Dictionary<string, Dictionary<string, Type>>();
             var types = Assembly.GetExecutingAssembly().GetTypes().Where(m => m.Namespace.Equals(repoNamespace, StringComparison.OrdinalIgnoreCase)).ToList();
