@@ -7,15 +7,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Caching;
+using System.Web.Hosting;
+using System.IO;
+using System.Reflection;
 
 namespace CSharpLibrary
 {
-
     class Program
     {
         static void Main(string[] args)
         {
-           Console.ReadKey();
+            Console.ReadKey();
+        }
+
+        private static string GetAbsolutePathOfAFile(string relativePath)
+        {
+            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + relativePath;
         }
 
         private static void TestCalculateWorkingDaysWithPairs()
