@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MockRepo\CountryRepo.cs" />
+    <Compile Include="MockRepo\ICountryRepo.cs" />
     <Compile Include="MockRepo\StudentRepo.cs" />
     <Compile Include="Modals\NetworkUser.cs" />
     <Compile Include="Modals\QueryParser.cs" />

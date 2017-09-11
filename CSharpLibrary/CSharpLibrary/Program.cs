@@ -11,14 +11,34 @@ using System.Runtime.Caching;
 using System.Web.Hosting;
 using System.IO;
 using System.Reflection;
+using System.Diagnostics;
+using CSharpLibrary.MockRepo;
 
 namespace CSharpLibrary
 {
-    class Program
+    public class Program
     {
+        public ICountryRepo countryRepo;
+
+        public Program(ICountryRepo countryRepo)
+        {
+            this.countryRepo = countryRepo;
+        }
+
         static void Main(string[] args)
         {
+            Console.WriteLine("From SErvice");
             Console.ReadKey();
+        }
+
+        public List<string> GetCountries()
+        {
+            var countries = countryRepo.GetCountryNames();
+            for(var i=0; i<countries.Count; i++)
+            {
+                countries[i] = countries[i].ToLower();
+            }
+            return countries;
         }
 
         private static string GetAbsolutePathOfAFile(string relativePath)
