@@ -16,6 +16,14 @@ using CSharpLibrary.MockRepo;
 
 namespace CSharpLibrary
 {
+    public class Base
+    {
+        public Base(int i)
+        {
+
+        }
+    }
+
     public class Program
     {
         public ICountryRepo countryRepo;
@@ -27,17 +35,40 @@ namespace CSharpLibrary
 
         static void Main(string[] args)
         {
-            Console.WriteLine("From SErvice");
+            Debug.WriteLine("Debug Information-Product Starting ");
+            #if true
+                Console.WriteLine("test");
+            #endif
+
+            Console.WriteLine("From Service");
             Console.ReadKey();
+        }
+
+        public static void TestFtpDownload()
+        {
+            Ftp f = new Ftp("ftp://ftp.uconn.edu/48_hour/", "anonymous","");
+            f.GetResponse("SampleInfo.json");
+        }
+
+        public static void TestFtpUpload()
+        {
+            Ftp f = new Ftp("ftp://ftp.uconn.edu/48_hour/", "anonymous", "");
+            f.UploadFile(GetAbsolutePathOfAFile("\\AppData\\SampleInfo.json"), "Sample1");
+        }
+
+        public static void TestFtpDelete()
+        {
+            Ftp f = new Ftp("ftp://ftp.uconn.edu/48_hour/", "anonymous", "");
+            f.DeleteFile("SampleInfo.json");
         }
 
         public List<string> GetCountries()
         {
-            var countries = countryRepo.GetCountryNames();
-            for(var i=0; i<countries.Count; i++)
-            {
-                countries[i] = countries[i].ToLower();
-            }
+                var countries = countryRepo.GetCountryNames();
+                for (var i = 0; i < countries.Count; i++)
+                {
+                    countries[i] = countries[i].ToLower();
+                }
             return countries;
         }
 

@@ -61,9 +61,13 @@
     <Compile Include="Utility\Country.cs" />
     <Compile Include="Utility\DateUtils.cs" />
     <Compile Include="Utility\Formatters.cs" />
+    <Compile Include="Utility\Ftp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="AppData\SampleInfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppData\test.txt">
