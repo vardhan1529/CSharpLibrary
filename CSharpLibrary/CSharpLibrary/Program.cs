@@ -24,6 +24,35 @@ namespace CSharpLibrary
         }
     }
 
+    public static class S1
+    {
+        public static string V1 { get; set; }
+    }
+
+    public static class S2
+    {
+
+    }
+
+    public class ST
+    {
+        public string s { get; set; }
+        public readonly static string t;
+        static ST()
+        {
+            t = "Static field";
+        }
+
+        public ST():this(string.Empty)
+        {
+        }
+
+        public ST(string s)
+        {
+            this.s = s;
+        }
+    }
+
     public class Program
     {
         public ICountryRepo countryRepo;
