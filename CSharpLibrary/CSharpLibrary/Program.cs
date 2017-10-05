@@ -13,6 +13,7 @@ using System.IO;
 using System.Reflection;
 using System.Diagnostics;
 using CSharpLibrary.MockRepo;
+using CSharpLibrary.ConceptSamples;
 
 namespace CSharpLibrary
 {
