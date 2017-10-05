@@ -24,14 +24,19 @@ namespace CSharpLibrary
         }
     }
 
-    public static class S1
+    public static class NestedClass
     {
-        public static string V1 { get; set; }
+        private class NC
+        {
+        }
     }
 
-    public static class S2
+    sealed class SealedClass
     {
+        public void SampleMethod()
+        {
 
+        }
     }
 
     public class ST
