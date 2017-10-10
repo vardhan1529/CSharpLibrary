@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLibrary", "CSharpLibrary\CSharpLibrary.csproj", "{76F2C540-6C13-4237-8F51-8573B74C7C3D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FAD8D7C5-A9CA-488A-9C58-8A42A1EE5036} = {FAD8D7C5-A9CA-488A-9C58-8A42A1EE5036}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLibrary.Tests", "CSharpLibrary.Tests\CSharpLibrary.Tests.csproj", "{11041B0F-9E5A-40AC-BB46-7522DB39378D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDomainTest", "AppDomainTest\AppDomainTest.csproj", "{FAD8D7C5-A9CA-488A-9C58-8A42A1EE5036}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{11041B0F-9E5A-40AC-BB46-7522DB39378D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11041B0F-9E5A-40AC-BB46-7522DB39378D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11041B0F-9E5A-40AC-BB46-7522DB39378D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD8D7C5-A9CA-488A-9C58-8A42A1EE5036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD8D7C5-A9CA-488A-9C58-8A42A1EE5036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD8D7C5-A9CA-488A-9C58-8A42A1EE5036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD8D7C5-A9CA-488A-9C58-8A42A1EE5036}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
