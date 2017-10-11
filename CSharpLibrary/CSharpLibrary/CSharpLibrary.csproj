@@ -67,6 +67,7 @@
     <Compile Include="Utility\DateUtils.cs" />
     <Compile Include="Utility\Formatters.cs" />
     <Compile Include="Utility\Ftp.cs" />
+    <Compile Include="Utility\SimplePerfomanceCheck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
