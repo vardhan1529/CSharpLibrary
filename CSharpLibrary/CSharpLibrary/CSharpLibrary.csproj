@@ -13,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,9 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConceptSamples\AttributeCreation.cs" />
     <Compile Include="ConceptSamples\Book.cs" />
     <Compile Include="ConceptSamples\IBook.cs" />
     <Compile Include="ConceptSamples\ImplicitExplicitTest.cs" />
+    <Compile Include="ConceptSamples\Singleton.cs" />
     <Compile Include="ConceptSamples\SolidPrinciples.cs" />
     <Compile Include="MockRepo\CountryRepo.cs" />
     <Compile Include="MockRepo\ICountryRepo.cs" />
