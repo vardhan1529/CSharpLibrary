@@ -52,6 +52,7 @@
     <Compile Include="ConceptSamples\Book.cs" />
     <Compile Include="ConceptSamples\IBook.cs" />
     <Compile Include="ConceptSamples\ImplicitExplicitTest.cs" />
+    <Compile Include="ConceptSamples\SolidPrinciples.cs" />
     <Compile Include="MockRepo\CountryRepo.cs" />
     <Compile Include="MockRepo\ICountryRepo.cs" />
     <Compile Include="MockRepo\StudentRepo.cs" />
