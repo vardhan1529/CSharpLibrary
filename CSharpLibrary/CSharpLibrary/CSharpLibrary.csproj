@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,6 +45,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +64,7 @@
     <Compile Include="ConceptSamples\SampleGoalCalculationArc.cs" />
     <Compile Include="ConceptSamples\Singleton.cs" />
     <Compile Include="ConceptSamples\SolidPrinciples.cs" />
+    <Compile Include="ConceptSamples\UnSafeContext.cs" />
     <Compile Include="MockRepo\CountryRepo.cs" />
     <Compile Include="MockRepo\ICountryRepo.cs" />
     <Compile Include="MockRepo\StudentRepo.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Utility\PerfomanceCheck.cs" />
     <Compile Include="Utility\ProgressBar.cs" />
     <Compile Include="Utility\SimplePerfomanceCheck.cs" />
+    <Compile Include="Utility\StringManipulations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
