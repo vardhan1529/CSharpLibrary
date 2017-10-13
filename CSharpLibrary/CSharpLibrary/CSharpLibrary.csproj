@@ -53,8 +53,11 @@
   <ItemGroup>
     <Compile Include="ConceptSamples\AttributeCreation.cs" />
     <Compile Include="ConceptSamples\Book.cs" />
+    <Compile Include="ConceptSamples\FactoryPattern.cs" />
     <Compile Include="ConceptSamples\IBook.cs" />
     <Compile Include="ConceptSamples\ImplicitExplicitTest.cs" />
+    <Compile Include="ConceptSamples\ObseverPattern.cs" />
+    <Compile Include="ConceptSamples\SampleGoalCalculationArc.cs" />
     <Compile Include="ConceptSamples\Singleton.cs" />
     <Compile Include="ConceptSamples\SolidPrinciples.cs" />
     <Compile Include="MockRepo\CountryRepo.cs" />
