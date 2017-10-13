@@ -53,9 +53,11 @@
   <ItemGroup>
     <Compile Include="ConceptSamples\AttributeCreation.cs" />
     <Compile Include="ConceptSamples\Book.cs" />
+    <Compile Include="ConceptSamples\ClassAccessModifiers.cs" />
     <Compile Include="ConceptSamples\FactoryPattern.cs" />
     <Compile Include="ConceptSamples\IBook.cs" />
     <Compile Include="ConceptSamples\ImplicitExplicitTest.cs" />
+    <Compile Include="ConceptSamples\InstanceDelegateCall.cs" />
     <Compile Include="ConceptSamples\ObseverPattern.cs" />
     <Compile Include="ConceptSamples\SampleGoalCalculationArc.cs" />
     <Compile Include="ConceptSamples\Singleton.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="Utility\DateUtils.cs" />
     <Compile Include="Utility\Formatters.cs" />
     <Compile Include="Utility\Ftp.cs" />
+    <Compile Include="Utility\PerfomanceCheck.cs" />
+    <Compile Include="Utility\ProgressBar.cs" />
     <Compile Include="Utility\SimplePerfomanceCheck.cs" />
   </ItemGroup>
   <ItemGroup>

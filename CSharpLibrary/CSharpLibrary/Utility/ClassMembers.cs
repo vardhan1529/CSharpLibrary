@@ -40,5 +40,24 @@ namespace CSharpLibrary.Utility
         {
             return GetAllClassProperties()[cName];
         }
+
+        public static void DynamicObjectCreation()
+        {
+            Assembly a = Assembly.LoadFile(@"D:\My Projects\CsharpLib\CSharpLibrary\CSharpLibrary\bin\Debug\Newtonsoft.Json.dll");
+            a.GetTypes().ToList().ForEach(m => { Console.WriteLine(m.FullName); });
+            // Get the type to use.
+            Type t = a.GetType("Newtonsoft.Json.JsonConvert");
+            // Get the method to call.
+            MethodInfo me = t.GetMethod("SerializeObject", new Type[] { typeof(string) });
+            // Create an instance.
+            //object obj = Activator.CreateInstance(t);
+            var oa = new[] { new { Name = "test" } };
+            //// Execute the method.
+            //var xs = me.Invoke(obj, oa);
+
+            //For static type method, there is no need of instance creation
+            var xss = me.Invoke(null, oa);
+
+        }
     }
 }
