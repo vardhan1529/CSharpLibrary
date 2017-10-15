@@ -93,7 +93,7 @@ namespace CSharpLibrary.Utility
             TestStaticMoreParam(p3);
             s1.Stop();
             var staticMoreParam = s1.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"Time taken to call a method with struct parameter containing 4 int and 1 string is {staticMoreParam}");
+            Console.WriteLine(string.Format("Time taken to call a method with struct parameter containing 4 int and 1 string is {0}",staticMoreParam ));
 
             var p2 = new PointC() { S = "FF", X = 4, Y = 45 };
             //0.248
@@ -101,7 +101,7 @@ namespace CSharpLibrary.Utility
             TestClassParam(p2);
             s3.Stop();
             var classParam = s3.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"Time taken to call a method with refernece type parameter is {classParam}");
+            Console.WriteLine(string.Format("Time taken to call a method with refernece type parameter is {0}", classParam));
 
             var p1 = new Point();
             p1.S = "SS"; p1.X = 4; p1.Y = 45;
@@ -111,7 +111,7 @@ namespace CSharpLibrary.Utility
             TestStaticParam(p1);
             s2.Stop();
             var staticLessParam = s2.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"Time taken to call a method with struct parameter containing 2 int and 1 string is {staticLessParam}");
+            Console.WriteLine("Time taken to call a method with struct parameter containing 2 int and 1 string is " + staticLessParam);
 
             var t5 = SimplePerfomanceCheck.PerformTest(TestStaticMoreParam, p3);
             var t3 = SimplePerfomanceCheck.PerformTest(TestStaticParam, p1);

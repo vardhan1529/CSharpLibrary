@@ -14,7 +14,7 @@ namespace AppDomainTest
 
         public void PrintStatus()
         {
-            Console.WriteLine($"App domain friendly name {AppDomain.CurrentDomain.FriendlyName}");
+            Console.WriteLine(string.Format("App domain friendly name {0}", AppDomain.CurrentDomain.FriendlyName));
             if (File.Exists(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) +  "\\test.json"))
             {
                 Console.WriteLine("File found");
@@ -30,7 +30,7 @@ namespace AppDomainTest
     {
         public void PrintStatus()
         {
-            Console.WriteLine($"App domain friendly name {AppDomain.CurrentDomain.FriendlyName}");
+            Console.WriteLine(string.Format("App domain friendly name {0}", AppDomain.CurrentDomain.FriendlyName));
             if (File.Exists(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\test.json"))
             {
                 Console.WriteLine("File found");
