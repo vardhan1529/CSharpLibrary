@@ -80,6 +80,7 @@
     <Compile Include="Utility\DateUtils.cs" />
     <Compile Include="Utility\Formatters.cs" />
     <Compile Include="Utility\Ftp.cs" />
+    <Compile Include="Utility\Networking.cs" />
     <Compile Include="Utility\PerfomanceCheck.cs" />
     <Compile Include="Utility\ProgressBar.cs" />
     <Compile Include="Utility\SimplePerfomanceCheck.cs" />
