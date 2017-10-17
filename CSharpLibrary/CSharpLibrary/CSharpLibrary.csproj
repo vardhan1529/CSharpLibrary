@@ -37,12 +37,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\Lib\Newtonsoft.Json\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Bogus, Version=18.0.2.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bogus.18.0.2\lib\net40\Bogus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -57,9 +63,12 @@
     <Compile Include="ConceptSamples\Book.cs" />
     <Compile Include="ConceptSamples\ClassAccessModifiers.cs" />
     <Compile Include="ConceptSamples\FactoryPattern.cs" />
+    <Compile Include="ConceptSamples\HttpClientHandlers.cs" />
     <Compile Include="ConceptSamples\IBook.cs" />
     <Compile Include="ConceptSamples\ImplicitExplicitTest.cs" />
     <Compile Include="ConceptSamples\InstanceDelegateCall.cs" />
+    <Compile Include="ConceptSamples\GenericMockDataGenerator.cs" />
+    <Compile Include="ConceptSamples\Multithreading.cs" />
     <Compile Include="ConceptSamples\ObseverPattern.cs" />
     <Compile Include="ConceptSamples\SampleGoalCalculationArc.cs" />
     <Compile Include="ConceptSamples\Singleton.cs" />
@@ -93,6 +102,7 @@
     <None Include="AppData\SampleInfo.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppData\test.txt">
