@@ -62,14 +62,36 @@ namespace CSharpLibrary.ConceptSamples
             var y = await x;
             Console.WriteLine("After Await");
         }
-        
+
+
         public static Task<int> t()
         {
             return new Task<int>(() =>
             {
                 Thread.Sleep(2000);
                 return 10;
-            });   
+            });
         }
+
+        public static void TestAsync()
+        {
+            Console.WriteLine("Calling a async method");
+            var lp = LongRunningMethod();
+            Console.WriteLine("async method started execution");
+            lp.Wait();
+            Console.WriteLine("async call ended");
+        }
+
+        //Async methods without await makes the method syncronous
+        public static async Task LongRunningMethod()
+        {
+            Console.WriteLine("Long running method started");
+            Task t = new Task(() => { Thread.Sleep(2000); });
+            t.Start();
+            await t;
+            Thread.Sleep(2000);
+            Console.WriteLine("Long running process end");
+        }
+        
     }
 }
