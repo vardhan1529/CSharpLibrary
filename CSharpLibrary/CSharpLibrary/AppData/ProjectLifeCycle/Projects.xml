@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Projects>
+  <Project id="1" name="Abc Project" categoryId="1" status="2" />
+  <Project id="2" name="Unknown Project" categoryId="1" status="2" />
+  <Project id="3" name="Wuv Project" categoryId="1" status="4" />
+  <Project id="4" name="Mno Project" categoryId="1" status="2" />
+  <Project id="5" name="Qwe Project" categoryId="2" status="32" />
+  <Project id="6" name="Bnm Project" categoryId="2" status="64" />
+  <Project id="7" name="Lmn Project" categoryId="2" status="8" />
+</Projects>

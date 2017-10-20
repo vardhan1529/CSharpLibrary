@@ -31,6 +31,12 @@ namespace CSharpLibrary
             Console.ReadKey();
         }
 
+        public static void SimpleFormat()
+        {
+            for (int val = 0; val <= 16; val++)
+                Console.WriteLine("{0,3} - {1:G}", val, (ConceptSamples.ProjectLifeCycle.ProjectStatus)val);
+        }
+
         public static void TestFtpDownload()
         {
             Ftp f = new Ftp("ftp://ftp.uconn.edu/48_hour/", "anonymous", "");

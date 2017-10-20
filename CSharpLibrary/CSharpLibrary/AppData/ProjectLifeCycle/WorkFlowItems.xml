@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkFlowItems>
+  <WorkFlowItem  id="1" categoryId="1" name="RequirementAnalysis" order="1"/>
+  <WorkFlowItem  id="2" categoryId="1" name="Development" order="2"/>
+  <WorkFlowItem  id="3" categoryId="1" name="Testing" order="3"/>
+  <WorkFlowItem  id="4" categoryId="2" name="RequirementAnalysis" order="1"/>
+  <WorkFlowItem  id="5" categoryId="2" name="Design" order="2"/>
+  <WorkFlowItem  id="6" categoryId="2" name="Production" order="3"/>
+</WorkFlowItems>

@@ -65,6 +65,11 @@
     <Compile Include="ConceptSamples\GenericMockDataGenerator.cs" />
     <Compile Include="ConceptSamples\Multithreading.cs" />
     <Compile Include="ConceptSamples\ObseverPattern.cs" />
+    <Compile Include="ConceptSamples\ProcessUpdateProvider.cs" />
+    <Compile Include="ConceptSamples\ProjectLifeCycle\Category.cs" />
+    <Compile Include="ConceptSamples\ProjectLifeCycle\Common.cs" />
+    <Compile Include="ConceptSamples\ProjectLifeCycle\Project.cs" />
+    <Compile Include="ConceptSamples\ProjectLifeCycle\WorkFlowItem.cs" />
     <Compile Include="ConceptSamples\SampleGoalCalculationArc.cs" />
     <Compile Include="ConceptSamples\Singleton.cs" />
     <Compile Include="ConceptSamples\SolidPrinciples.cs" />
@@ -100,6 +105,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppData\ProjectLifeCycle\Categories.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\ProjectLifeCycle\Projects.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\ProjectLifeCycle\WorkFlowItems.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="AppData\test.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
