@@ -38,7 +38,7 @@ namespace CSharpLibrary.ConceptSamples
             var result = await t;
             Console.WriteLine("Process1 Ended");
 
-            return await t;
+            return result;
         }
 
 
@@ -58,7 +58,7 @@ namespace CSharpLibrary.ConceptSamples
             var result = await t;
             Console.WriteLine("Process2 Ended");
 
-            return await t;
+            return result;
         }
 
         // Process3.. It takes 3 secs to complete
@@ -77,7 +77,7 @@ namespace CSharpLibrary.ConceptSamples
             var result = await t;
             Console.WriteLine("Process3 Ended");
 
-            return await t;
+            return result;
         }
     }
 }
