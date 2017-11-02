@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace CSharpLibrary
 {
@@ -22,10 +23,15 @@ namespace CSharpLibrary
 
         static void Main(string[] args)
         {
+            //To disable warnings
+#pragma warning disable
+            var i = 0;
+
             Debug.WriteLine("Debug Information-Product Starting ");
-            #if true
+#if true
             Console.WriteLine("test");
-            #endif
+#warning test
+#endif
 
             Console.WriteLine("From Service");
             Console.ReadKey();
@@ -35,6 +41,23 @@ namespace CSharpLibrary
         {
             for (int val = 0; val <= 16; val++)
                 Console.WriteLine("{0,3} - {1:G}", val, (ConceptSamples.ProjectLifeCycle.ProjectStatus)val);
+        }
+
+        public  static async Task<int> ThreadUsageWithAwait()
+        {
+            var x = 0;
+            Console.WriteLine($"Thread managedID at the start of async method {System.Threading.Thread.CurrentThread.ManagedThreadId}");
+            System.Threading.Thread.Sleep(2000);
+            Task tt = new Task(() => { System.Threading.Thread.Sleep(2000);
+                x = 34;
+                Console.WriteLine($"Thread managedID in the task method {System.Threading.Thread.CurrentThread.ManagedThreadId}");
+            });
+            tt.Start();
+            Console.WriteLine($"Thread managedID befor the configure await method {System.Threading.Thread.CurrentThread.ManagedThreadId}");
+            await tt;
+            Console.WriteLine($"Thread managedID after the configure await method {System.Threading.Thread.CurrentThread.ManagedThreadId}");
+            Console.WriteLine(x);
+            return 5;
         }
 
         public static void TestFtpDownload()
