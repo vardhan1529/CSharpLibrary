@@ -1,4 +1,4 @@
 language: csharp
-solution: CSharpLibrary.sln
+solution: CSharpLibrary/CSharpLibrary.sln
 script:    # the following commands are just examples, use whatever your build process requires
   - ./build.sh
