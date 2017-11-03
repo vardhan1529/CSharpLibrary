@@ -68,7 +68,7 @@
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.configuration">
+    <Reference Include="System.Configuration">
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core">
