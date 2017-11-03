@@ -15,19 +15,20 @@ namespace CSharpLibrary.ConceptSamples
     */
     class UnSafeContext
     {
-        void InlineUnsafe()
-        {
-            unsafe
-            {
-                char p = 'V';
-                char* pp = &p;
-            }
-        }
+        //An unsafe code. Will be a successful build only if the compiler is configured to compile unsafe code
+        //void InlineUnsafe()
+        //{
+        //    unsafe
+        //    {
+        //        char p = 'V';
+        //        char* pp = &p;
+        //    }
+        //}
 
-        unsafe void MethodLevelUnsafe()
-        {
-            int i = 90;
-            int* ip = &i;
-        }
+        //unsafe void MethodLevelUnsafe()
+        //{
+        //    int i = 90;
+        //    int* ip = &i;
+        //}
     }
 }
