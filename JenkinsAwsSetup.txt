@@ -1,0 +1,49 @@
+1. From the AWS Management Console, launch the Amazon EC2 instance
+from an Amazon Machine Image (AMI) that has the base operating
+system you want.
+
+2. Choose a security group that will allow SSH access as well as port 80 or
+8080 to access your Jenkins dashboard. You should only enable ingress
+from the IP addresses you wish to allow access to your server. See
+Securing Network Access to the Master Node for more
+details.
+
+3. Connect to the instance via SSH.17
+
+4. Update the yum package management tool.
+
+$ sudo yum update –y
+
+5. Download the latest Jenkins code package.
+
+$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+
+6. Import a key file from Jenkins-CI to enable installation from the package.
+
+$ sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+
+7. Install Jenkins.
+
+$ sudo yum install jenkins -y
+
+8. Start Jenkins as a service.
+
+$ sudo service jenkins start
+
+-------------------------------
+An error may occure if the java version is not the latest.
+Upgrade the java version
+
+9. Configure Jenkins, now that it’s installed and running on your Amazon
+EC2 instance. Use its management interface at port 80 or 8080, or
+remotely access the server via SSH. In its default configuration, Jenkins
+versions 2.0 and later lock down access to the management interface. 
+Amazon Web Services – Jenkins on AWS
+
+The first time you use the dashboard at http://<your-serveraddress>:8080,
+you will be prompted to unlock Jenkins:
+--------------------------------
+Use this in putty to get the key.
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
