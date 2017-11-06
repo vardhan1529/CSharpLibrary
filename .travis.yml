@@ -2,3 +2,4 @@ language: csharp
 solution: CSharpLibrary/CSharpLibrary.sln
 script:
     - msbuild CSharpLibrary/CSharpLibrary/CSharpLibrary.csproj
+    
