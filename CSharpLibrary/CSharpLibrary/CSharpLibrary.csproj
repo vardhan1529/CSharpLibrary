@@ -106,6 +106,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\Kruskal.cs" />
     <Compile Include="ConceptSamples\AttributeCreation.cs" />
     <Compile Include="ConceptSamples\Book.cs" />
     <Compile Include="ConceptSamples\ClassAccessModifiers.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Utility\AppDomainEx.cs" />
     <Compile Include="Utility\ClassMembers.cs" />
     <Compile Include="Utility\Country.cs" />
+    <Compile Include="Utility\CustomTimeElapseProvider.cs" />
     <Compile Include="Utility\DateUtils.cs" />
     <Compile Include="Utility\Formatters.cs" />
     <Compile Include="Utility\Ftp.cs" />
@@ -151,6 +153,7 @@
     <Compile Include="Utility\ProgressBar.cs" />
     <Compile Include="Utility\RegularExpressions.cs" />
     <Compile Include="Utility\SimplePerfomanceCheck.cs" />
+    <Compile Include="Utility\SimpleQuerySearch.cs" />
     <Compile Include="Utility\StringManipulations.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +168,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppData\Kruskal\complex_input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\Kruskal\simple_input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="AppData\ProjectLifeCycle\Categories.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>

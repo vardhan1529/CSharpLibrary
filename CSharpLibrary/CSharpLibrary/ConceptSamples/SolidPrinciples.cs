@@ -36,6 +36,11 @@ namespace CSharpLibrary.ConceptSamples
                 public float Price { get; set; }
                 public bool Available { get; set; }
                 static readonly List<FoodItem> FoodItemsList;
+
+                /// <summary>
+                /// Get the food item based on id or name using indexing
+                /// </summary>
+                public readonly static FoodItem Get = new FoodItem();
                 static FoodItem()
                 {
                     FoodItemsList = new List<FoodItem>();
@@ -80,14 +85,24 @@ namespace CSharpLibrary.ConceptSamples
                     return FoodItemsList.Where(m => m.Id == id).FirstOrDefault();
                 }
 
+                /// <summary>
+                /// Get the food item based on the item name
+                /// </summary>
+                /// <param name="name"> The food item name </param>
+                /// <returns> The food item </returns>
                 public FoodItem this[string name]
                 {
                     get
                     {
-                        return FoodItemsList.Where(m => m.Name == name).FirstOrDefault();
+                        return FoodItemsList.Where(m => m.Name.Equals(name, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
                     }
                 }
 
+                /// <summary>
+                /// Gets the food item based on the item id
+                /// </summary>
+                /// <param name="id"> The food item id </param>
+                /// <returns> The food item </returns>
                 public FoodItem this[int id]
                 {
                     get
