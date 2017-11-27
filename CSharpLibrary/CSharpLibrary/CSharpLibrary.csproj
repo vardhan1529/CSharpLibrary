@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\Kruskal.cs" />
+    <Compile Include="Algorithms\LibraryRoadMincost.cs" />
     <Compile Include="ConceptSamples\AttributeCreation.cs" />
     <Compile Include="ConceptSamples\Book.cs" />
     <Compile Include="ConceptSamples\ClassAccessModifiers.cs" />
