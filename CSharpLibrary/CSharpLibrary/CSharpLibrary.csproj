@@ -106,9 +106,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\AES.cs" />
+    <Compile Include="Algorithms\Combinations.cs" />
+    <Compile Include="Algorithms\CrossWord.cs" />
     <Compile Include="Algorithms\Kruskal.cs" />
     <Compile Include="Algorithms\LibraryRoadMincost.cs" />
+    <Compile Include="Algorithms\Longest2CharacterString.cs" />
+    <Compile Include="Algorithms\SimpleEncryption.cs" />
     <Compile Include="ConceptSamples\AttributeCreation.cs" />
+    <Compile Include="ConceptSamples\BaseChildConversion.cs" />
     <Compile Include="ConceptSamples\Book.cs" />
     <Compile Include="ConceptSamples\ClassAccessModifiers.cs" />
     <Compile Include="ConceptSamples\FactoryPattern.cs" />
@@ -123,6 +129,7 @@
     <Compile Include="ConceptSamples\Multithreading.cs" />
     <Compile Include="ConceptSamples\OAuthSample.cs" />
     <Compile Include="ConceptSamples\ObseverPattern.cs" />
+    <Compile Include="ConceptSamples\Overloading.cs" />
     <Compile Include="ConceptSamples\ProcessUpdateProvider.cs" />
     <Compile Include="ConceptSamples\ProjectLifeCycle\Category.cs" />
     <Compile Include="ConceptSamples\ProjectLifeCycle\Common.cs" />
@@ -132,6 +139,7 @@
     <Compile Include="ConceptSamples\Singleton.cs" />
     <Compile Include="ConceptSamples\SolidPrinciples.cs" />
     <Compile Include="ConceptSamples\UnSafeContext.cs" />
+    <Compile Include="EncryptDecrypt\Crypto.cs" />
     <Compile Include="MockRepo\CountryRepo.cs" />
     <Compile Include="MockRepo\ICountryRepo.cs" />
     <Compile Include="MockRepo\StudentRepo.cs" />
