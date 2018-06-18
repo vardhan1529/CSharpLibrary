@@ -29,7 +29,7 @@ namespace CSharpLibrary.Algorithms
                 var st = Convert.ToBase64String(encrypted);
                 var b = Convert.FromBase64String(st);
                 // Decrypt the bytes to a string.
-                var k1 = new Rfc2898DeriveBytes("Sample Password", Encoding.UTF8.GetBytes("Sample Salt"), 500);
+                var k1 = new Rfc2898DeriveBytes("Sample Password", Encoding.UTF8.GetBytes("Sample Salt"), 1000);
                 myAes.Key = k1.GetBytes(32);
                 myAes.IV = k1.GetBytes(16);
                 string roundtrip = DecryptStringFromBytes_Aes(b, myAes.Key, myAes.IV);
@@ -73,8 +73,8 @@ namespace CSharpLibrary.Algorithms
                         }
                         encrypted = msEncrypt.ToArray();
                         
-                        var s = new StreamReader(msEncrypt);
-                        Console.WriteLine(s.ReadToEnd());
+                        //var s = new StreamReader(msEncrypt);
+                        //Console.WriteLine(s.ReadToEnd());
                     }
                 }
             }

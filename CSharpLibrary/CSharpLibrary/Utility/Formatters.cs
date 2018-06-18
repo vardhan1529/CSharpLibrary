@@ -45,7 +45,16 @@ namespace CSharpLibrary.Utility
 
             public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
             {
+                var dicValues = value as Dictionary<string, string>;
+                var result = new StringBuilder();
+                result.AppendLine("[");
+                foreach(var val in dicValues)
+                {
+                    result.AppendLine($"{{ {val.Key} : \"{val.Value}\"");
+                }
 
+                result.AppendLine("]");
+                writer.WriteValue(result.ToString());
             }
         }
     }
