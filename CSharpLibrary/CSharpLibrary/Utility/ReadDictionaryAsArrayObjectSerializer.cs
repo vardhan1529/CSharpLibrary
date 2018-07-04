@@ -41,6 +41,8 @@ namespace CSharpLibrary.Utility
             return res;
         }
 
+
+        //Custom write
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             var dicValues = value as Dictionary<string, string>;
