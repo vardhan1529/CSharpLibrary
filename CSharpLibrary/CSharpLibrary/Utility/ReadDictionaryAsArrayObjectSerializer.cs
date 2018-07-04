@@ -44,7 +44,6 @@ namespace CSharpLibrary.Utility
         {
             var dicValues = value as Dictionary<string, string>;
             writer.WriteStartArray();
-            var objects = new List<JToken>();
             foreach (var val in dicValues)
             {
                 writer.WriteStartObject();
