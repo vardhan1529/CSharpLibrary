@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSharpLibrary.Utility
 {
+    //Custom Dictionary
     public class ReadDictionaryAsArrayObjectSerializer : JsonConverter
     {
         public override bool CanRead
