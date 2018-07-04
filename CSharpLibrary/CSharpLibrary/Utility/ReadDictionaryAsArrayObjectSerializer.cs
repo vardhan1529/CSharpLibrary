@@ -25,6 +25,7 @@ namespace CSharpLibrary.Utility
             return true;
         }
 
+        //Custom Read
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             var res = new Dictionary<string, string>();
