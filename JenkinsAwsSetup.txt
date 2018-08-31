@@ -1,4 +1,4 @@
-Steps: Please follow these
+Steps:
 --------------------------------------------------------------------
 1. From the AWS Management Console, launch the Amazon EC2 instance
 from an Amazon Machine Image (AMI) that has the base operating
